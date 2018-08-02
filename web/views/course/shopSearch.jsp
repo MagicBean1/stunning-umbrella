@@ -8,7 +8,7 @@
 	<%
 		Shop s = (Shop)request.getAttribute("shop");
 	%>
-	<link rel="stylesheet" href="<%= request.getContextPath() %>/css/weather-icons-master/css/weather-icons.min.css">
+	<link rel="stylesheet" href="<%= request.getContextPath()%>/css/weather-icons-master/css/weather-icons.min.css">
 	<style>
 		p{
 			font-family: 'Cute Font', cursive;
@@ -119,6 +119,7 @@
 						//obj.hourly
 						console.log(coords);
 						console.log(obj.weather);
+						
 						var loc = "<h5>주소 : "+obj.weather.summary[0].grid.city+" "+obj.weather.summary[0].grid.county+"</h5>";
 						var cWeather = "<h5>오늘날씨</h5>";
 						var tWeather = "<h5>내일날씨</h5>";
@@ -145,6 +146,7 @@
 						cWeather += "<h5>최저기온 : "+obj.weather.summary[0].today.temperature.tmin+"</h5>";
 						tWeather += "<h5>최고기온 : "+obj.weather.summary[0].tomorrow.temperature.tmax+"</h5>";
 						tWeather += "<h5>최저기온 : "+obj.weather.summary[0].tomorrow.temperature.tmin+"</h5>";
+						$('#weather_title').html("<h4>대여소 날씨 정보</h4>");
 						$('#location').html(loc);
 						$('#today_weather').html(cWeather);
 						$('#tomorrow_weather').html(tWeather);
@@ -268,45 +270,31 @@
 			    양평북한강점
 			  </button>
 			  </div>
-			</div>
-			
-			
-			<div class = "col-sm-9 divMap">
-				<div id ="map"></div>
-			</div>		
-		</div>
-	</div>
-	<style>
-		.infoStyle{
-			height : 30vh;
-			
-		}
-		.div_shop_info{
-			height : 100%;
-			border : 1px solid red;
-		}
-		.div_wheather_info{
-			height : 100%;
-			border : 1px solid red;
-		}
-		.div_buy{
-			height : 100%;
-			border : 1px solid red;
-		}
-		
-	</style>
-	<div class ="container">
-		<div class = "row">
-			<div id = "weather_info" class = "col-sm-4">
-				<h4>대여소 현재 날씨</h4>
+			  	<div id = "weather_title"></div>
 				<div id="location"></div>
 				<div class ="row">
 					<div id="today_weather" class ="col-sm-6"></div>
 					<div id ="tomorrow_weather" class = col-sm-6></div>
 				</div>
 			</div>
-			<div id = "info" class = "infoStyle div_shop_info col-sm-4"></div>
-			<div class = "div_buy col-sm-4"></div>
+			
+			<style>
+				#info{
+				display:relative !important;
+				top:100px !important;
+				left:200px !important;
+				z-index:999 !important;
+				};
+				#map{display:relative;z-index:1 !important;};
+			</style>
+			
+			<div class = "col-sm-9 divMap">
+				<div id ="map">
+					<div id="info"></div>
+				</div>
+				
+				
+			</div>		
 		</div>
 	</div>
 <%@ include file= '/views/common/footer.jsp' %>
