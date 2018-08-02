@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+.row.content {height: 1000px}
+    
+    .sidenav {
+      height: 100%;
+    }
+	
+	
+    /* content 영역 style */	
+
+    table tr th{
+		font-family: 'Sunflower', sans-serif;
+		font-size : 28px;
+	}
+	table tr td{
+		font-family: 'Sunflower', sans-serif;
+		font-size : 20px;
+		}
+	.space{
+		height : 10px;
+		/* display : inline-block; */
+		}
+	
+	/* 슬라이드 갤러리 스타일 */
+
+	.course_image{
+		float : right;
+		width: 100%;
+		position: relative;
+		overflow : hidden;
+			
+	}
+	.prev,.next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 40%;
+	  width: auto;
+	  padding: 16px;
+	  margin-top: -50px;
+	  color: white;
+	  font-weight: bold;
+	  font-size: 50px;
+	  border-radius: 0 3px 3px 0;
+	  user-select: none;
+	  -webkit-user-select: none;
+	}
+	.next {
+	  right: 0;
+	  border-radius: 3px 0 0 3px;
+	}
+	.mySlides{
+		display: none;
+		height : 100%;
+		}
+	.caption-container {
+	  text-align: center;
+	  background-color: #222;
+	  padding: 2px 16px;
+	  color: white;
+		}
+	.row{
+		margin-left : 10px;
+		width: 100%;
+	}
+	.row:after {
+	  content: "";
+	  display: table;
+	}
+	
+	/* Six columns side by side */
+	.column {
+	  float: left;
+	  width: 24%;
+	  height : 100px;
+	}
+	.view{
+		width:100%;
+		float: left;
+		height : 400px;
+	}
+	.demo {
+	  opacity: 0.6;
+	}
+	
+	.active,
+	.demo:hover {
+	  opacity: 1;
+	}
+	
+	
+	/* 자전거길 정보 스타일 */
+	.course_info{
+		margin-top: 50px;
+		display : inline-block;
+		width: 100%;
+		}
+	.course_info table tr th{
+		width: 150px;
+		text-align: center;
+	}
+	
+	/* 코스약도 스타일 */
+	#map1{
+		float: center;
+		}
+	.level{
+		width: 40px;
+		height : 30px;
+		}
+		
+	.icon{
+		width: 40px;
+		height : 40px;
+		}
+	h1{
+	font-family: 'Black Han Sans', sans-serif;
+	
+	}
+	
+	h2{
+	font-family: 'Do Hyeon', sans-serif;
+	}
+	
+	.point{
+		width: 70px;}
+	
+	/* sidebar 반응형 css */
+	@media screen and (max-width: 767px) {
+		.sidenav {
+	        height: auto;
+	        padding: 15px;
+	      }
+		.sidenav ul li{
+	     	float : left;}
+	    .row.content {height: auto;
+	    	} 
+	    .ho:hover .course_name{
+    	display : block;
+    	position : absolute;
+    	}
+    }
+    .sidenav ul{
+    	list-style: none;
+    	}
+    .course_name {
+    	display : none;
+    	}
+    .ho:hover .course_name{
+    	display : block;
+    	matgine : 0px;
+    	}
+    .btn-group{width:100%;
+    	margin: 2px;}
+    .btn-group .btn{width:100%;
+   		font-size: 20px;
+   		font-family: 'Sunflower', sans-serif;}
+    .dropdown-menu{
+    	width : 100%;
+    	}
+    .dropdown-menu .dropdown-item{
+    	text-align : center;
+    	display : block;
+		color : white;
+		font-family: 'Sunflower', sans-serif;
+		font-size : 15px;
+    	}
+	  
+    .shop1{
+    	background-color: red;
+    	color : white;
+    	}
+    .shop1+.dropdown-menu{
+		background-color: red;
+ 		filter : brightness(130%);
+		}
+	.shop2{
+    	background-color: orange;
+    	color : white;
+    	}
+    .shop2+.dropdown-menu{
+		background-color: orange;
+ 		filter : brightness(130%);
+		}
+	.shop3{
+    	background-color: blue;
+    	color : white;
+    	}
+    .shop3+.dropdown-menu{
+		background-color: blue;
+ 		filter : brightness(120%);
+		}
+	.shop4{
+    	background-color: green;
+    	color : white;
+    	}
+    .shop4+.dropdown-menu{
+		background-color: green;
+ 		filter : brightness(120%);
+		}
+	.shop5{
+    	background-color: hotpink;
+    	color : white;
+    	}
+    .shop5+.dropdown-menu{
+		background-color: hotpink;
+ 		filter : brightness(120%);
+		}
+	.shop6{
+    	background-color: silver;
+    	color : white;
+    	}
+    .shop6+.dropdown-menu{
+		background-color: silver;
+ 		filter : brightness(120%);
+		}
