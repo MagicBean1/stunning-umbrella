@@ -15,9 +15,9 @@
 /* 	div.div_content{border:1px solid #1E68CB; width:644.32px; height:450px; padding-top:7px;color:#1E68CB} */
 	span.font{font:italic normal normal 200px}
 	div.content{background-color:#F0F0F0}
-	button#btn1{background-color:#1E68CB; width:170px; height:50px}
-	button#btn2{background-color:#1E68CB; width:170px; height:50px;margin-left:65px}
-	button#btn3{background-color:#1E68CB; width:170px; height:50px;margin-left:130px}
+		button#btn1{ width:100px; height:35px}
+	button#btn2{ width:100px; height:35px;margin-left:35px}
+	button#btn3{ width:100px; height:35px;margin-left:35px}
 </style>
 <script>
 	function fn_update(){
@@ -67,7 +67,7 @@
 			   		
 			   		<div class="row" style="padding-top:40px">
 			   			<div class="col-lg-3"></div>
-			   			<div class="col-lg-6 div_title"><span style="font-weight:bold">TITLE</span> <%=c.getCommunityTitle() %>
+			   			<div class="col-lg-6 div_title" style="width:50%"><span style="font-weight:bold">TITLE</span> <%=c.getCommunityTitle() %>
 			   				<input type="hidden" name="title" value="<%=c.getCommunityTitle() %>"/>	
 			   			</div>
 			   			<div class="col-lg-3"></div>
@@ -76,19 +76,22 @@
 			   		<div class="row" style="padding-top:40px">
 			   			<div class="col-lg-3"></div>
 			   			<%if(c.getOriginalFileName()!=null){ %>
-			   			<div class="col-lg-6 div_content" style="border:1px solid #1E68CB; width:644.32px; height:450px; padding-top:7px;color:#1E68CB"><span style="font-weight:bold">CONTENT</span><br><br>
+			   			<div class="col-lg-6 div_content" style="border:1px solid #1E68CB; height:80% padding-top:7px;color:#1E68CB"><span style="font-weight:bold">CONTENT</span><br><br><br>
 			   					<p style="text-align:center;">
-			    				<img style="width:450px; height:300px"src='<%=request.getContextPath() %>/upload/community/<%=c.getOriginalFileName()%>' width='16px'>
+			    				<img style="width:350px; height:250px"src='<%=request.getContextPath() %>/upload/community/<%=c.getOriginalFileName()%>' width='16px'>
 			    				</p>
 			    			<br><br>
 			   				<%=c.getCommunityContent() %>
+			   				<br><br><br>
 			   				<input type="hidden" name="content" value="<%=c.getCommunityContent() %>"/>	
 			   			</div>
+			   			<div class="col-lg-3"></div>
 			   			<%} else{%>
-			    			<div class="col-lg-6 div_content" style="border:1px solid #1E68CB; width:644.32px; height:250px; padding-top:7px;color:#1E68CB"><span style="font-weight:bold">CONTENT</span><br><br>
+			    			<div class="col-lg-6 div_content" style="border:1px solid #1E68CB;height:250px; padding-top:7px;color:#1E68CB"><span style="font-weight:bold">CONTENT</span><br><br>
 			   				<%=c.getCommunityContent() %>
 			   				<input type="hidden" name="content" value="<%=c.getCommunityContent() %>"/>	
 			   				</div>
+			   	
 			    			<%} %>
 			   			<div class="col-lg-3"></div>
 			   		</div>
@@ -97,25 +100,18 @@
 			   		<%if(memberLoggedIn!=null) {%> 
 			   			<%if(memberLoggedIn.getMem_id().equals("admin")){ %>
 			   				<div class="row" style="padding-top:40px;padding-bottom:100px">
-					   			<div class="col-lg-3"></div>
-					   			<div class="col-lg-6">
-					   				<div class="col-lg-3"></div>
-					   				<div class="col-lg-3"><button type="submit" class="btn btn-primary" id="btn2" onclick="fn_delete()">delet</button></div>
-					   				<div class="col-lg-3"></div>
-					   				<div class="col-lg-3"></div>
-					   			</div>
-					   			<div class="col-lg-3"></div>
+					   			
+					   		<button type="submit" class="btn btn-primary" style="width:110px; height:35px;margin-left:44%" onclick="fn_delete()">delet</button>
+					
+					   			
 			   				</div>
 			   			<%}else if(memberLoggedIn.getMem_id().equals(c.getCommunityWriter())) {%> 
-			   		<div class="row" style="padding-top:40px;padding-bottom:100px">
-			   			<div class="col-lg-3"></div>
-			   			<div class="col-lg-6">
-			   				<div class="col-lg-3"><button type="submit" class="btn btn-primary" id="btn1" onclick="fn_update()">update</button></div>
-			   				<div class="col-lg-3"><button type="submit" class="btn btn-primary" id="btn2" onclick="fn_delete()">delet</button></div>
-			   				<div class="col-lg-3"><button type="button" class="btn btn-primary" id="btn3" onclick="fn_cancel()">cancel</button></div>
-			   				<div class="col-lg-3"></div>
-			   			</div>
-			   			<div class="col-lg-3"></div>
+			   		<div class="row" style="padding-top:50px;padding-bottom:70px;margin-left:27%">
+			   	
+			   				<button type="submit" class="btn btn-primary" id="btn1" onclick="fn_update()">update</button>
+			   				<button type="submit" class="btn btn-primary" id="btn2" onclick="fn_delete()">delet</button>
+			   				<button type="button" class="btn btn-primary" id="btn3" onclick="fn_cancel()">cancel</button>
+			   			
 			   		</div>
 			   	</form>
 			   			<%} else{%>

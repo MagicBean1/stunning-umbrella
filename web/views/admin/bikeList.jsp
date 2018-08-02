@@ -20,7 +20,7 @@
    
    
 /* 상태 버튼 */
-/*    .Using{display:inline;width :70px;color:#ED0000;font-size:14px;
+   .Using{display:inline;width :70px;color:#ED0000;font-size:14px;
    text-shadow:1px 1px 1px  #FF6C6C ,1px 1px 10px  palegoldenrod;background-color: white;}
    .Using:hover{color:#ED0000}
    
@@ -34,7 +34,7 @@
    
 /* 상태li */
    ul form button{background-color: white; border: solid #ffffff 0px;}
-   ul form button:hover{background-color: rgba(130,130,130,0.1); font-color: color:#6799FF}    */
+   ul form button:hover{background-color: rgba(130,130,130,0.1); font-color: color:#6799FF}  
 
 </style>
 
@@ -45,7 +45,6 @@
 
 $(function () {
    $('#statusAvailable').on('click',function(){
-      alert('사용가능');
       var form1 = $('#statusAvailableFrm');
       var url = "<%= request.getContextPath() %>/bikeStatusUpdate";
       form1.attr("action", url);
@@ -53,16 +52,13 @@ $(function () {
       
    });
    $('#statusUsing').on('click',function(){
-      alert("사용중");
       var form1 = $('#statusUsingFrm');
-      
       var url = "<%= request.getContextPath() %>/bikeStatusUpdate";
       form1.attr("action", url);
       form1.submit();
       
    });
    $('#statusRepair').on('click',function(){
-      alert("수리중");
       var form1 = $('#statusRepairFrm');
       var url = "<%= request.getContextPath() %>/bikeStatusUpdate";
       form1.attr("action", url);
@@ -77,7 +73,6 @@ $(function () {
       
       var frm = $('#shopFrm');
       var url ="<%=request.getContextPath()%>/bikeShopSearch";
-      
       frm.attr('action',url);
       frm.submit();
       
@@ -102,7 +97,7 @@ $(function () {
 
   <div class="container" >
    <form  method="post" id ='shopFrm'>
-   <input type="hidden" value="<%=list%>" name='bList' id="bList">
+ 
         <div class="dropdown" style="text-align: right;">
               <select class="btn"  id="shopCode" name="shopCode">
                 <option value="tc_01">성남탄천점</option> 

@@ -43,6 +43,7 @@ public class NoticeCommentDeleteServlet extends HttpServlet {
 			//공지사항 댓글수 찾기
 			/*int count = new NoticeService().commentMinusCount(noticeNo);*/
 			//공지사항 댓글수 감소
+			
 			new NoticeService().commentCountMinus(noticeNo);
 		
 			

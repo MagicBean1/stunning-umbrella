@@ -155,7 +155,7 @@
 					    		<span class="glyphicon glyphicon-headphones gi-2x"></span>
 					    	</div>
 					    	<div class="col-lg-9" style="margin-top:20px">고객센터
-					    		<p style="font-style:normal; font-size:20px">1:1문의를 통해 불편사항, 개선사항 등을 남겨주시면 빠른 시일내에 답변드리겠습니다. </p>
+					    		<p style="font-style:normal; font-size:15px">1:1문의를 통해 불편사항, 개선사항 등을 남겨주시면 빠른 시일내에 답변드리겠습니다. </p>
 					    	</div>
 				    	</div>
 
@@ -263,7 +263,7 @@
 										<p>[Original Message]</p>
 										<p><%=c.getCenterContent() %></p>
 										<%if(c.getOriginalFileName()!=null) {%>
-										<img style="width:350px; height:210px; margin-bottom:50px"src='<%=request.getContextPath() %>/upload/center/<%=c.getOriginalFileName()%>' width='16px'/>
+										<img style="width:280px; height:160px; margin-bottom:50px"src='<%=request.getContextPath() %>/upload/center/<%=c.getOriginalFileName()%>' width='16px'/>
 										<%} %>
 										<br>
 									</div>
@@ -289,12 +289,12 @@
 				
 						</tbody>
 					 </table>
-					<div class="text-center" style="margin-left:110px">
-					    <ul class="pagination pagination-lg">
+					<div class="text-center" >
+					    <ul class="pagination pagination-sm" >
 					    	<%=pageBar %>
 					     </ul> 
 					 	
-				       		<button type="button" class="btn btn-primary btn pull-right" onclick='fn_write()' style="background-color:#1E68CB;width:110px; height:40px; font-size:16px;margin-top:25px">WRITE</button>
+				       		<button type="button" class="btn btn-primary btn pull-right" onclick='fn_write()' style="width:80px; height:29px; font-size:13px;margin-top:20px">WRITE</button>
 					
 					</div>
 			    </div>

@@ -97,10 +97,10 @@ public class AdminService {
 		
 	}
 	
-public int selectBikeTotalCount() {
+	public int selectBikeTotalCount(String shopCode) {
 		
 		Connection conn=getConnection();
-		int result=new AdminDAO().selectBikeTotalCount(conn);
+		int result=new AdminDAO().selectBikeTotalCount(conn,shopCode);
 		close(conn);
 		
 		return result;

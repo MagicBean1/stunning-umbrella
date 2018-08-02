@@ -69,10 +69,10 @@ function fn_write()
 	
 	  <div class="row content">
 		    <div class="col-lg-2 sidenav">
-		    	 <div class="w3-sidebar w3-bar-block w3-light-grey" style="width:280px;height:183px;box-shadow: 1px 1px 1px grey; ">
-			    	<h3 class="w3-bar-item w3-border-bottom" style="margin-bottom:0px;text-align: center;color:#1E68CB;font-weight:bold">Communication</h3>
-						    <a href="<%=request.getContextPath()%>/community/communityList" class="w3-bar-item w3-button w3-border-bottom" style="height:60px;background:white; text-align: center;">자유게시판</a>
-  							<a href="<%=request.getContextPath()%>/reviewList" class="w3-bar-item w3-button w3-border-bottom" style="height:60px;background:white;text-align: center;">이용후기</a>
+		    	 <div class="w3-sidebar w3-bar-block w3-light-grey" style="width:15%;height:20%;box-shadow: 1px 1px 1px grey; ">
+			    	<h4 class="w3-bar-item w3-border-bottom" style="margin-bottom:0px;text-align: center;color:#1E68CB;font-weight:bold;height:34%;"><strong>COMMUNICATION</strong></h4>
+						    <a href="<%=request.getContextPath()%>/community/communityList" class="w3-bar-item w3-button w3-border-bottom" style="height:29%;background:white; text-align: center;">자유게시판</a>
+  							<a href="<%=request.getContextPath()%>/reviewList" class="w3-bar-item w3-button w3-border-bottom" style="height:29%;background:white;text-align: center;">이용후기</a>
 			    </div>
 		    </div>
 		    <div class="row" >
@@ -108,32 +108,32 @@ function fn_write()
 							<%} %>
 						</tbody>
 					 </table>
-					<div class="text-center" style="margin-left:110px">
-					    <ul class="pagination pagination-lg">
+					<div class="text-center" style="margin-left:40%">
+					    <ul class="pagination pagination-sm"style="margin-right:55%">
 					    	<%=pageBar %>
 					     </ul> 
 					 	
-				       		<button type="button" class="btn btn-primary btn pull-right" onclick='fn_write()' style="background-color:#1E68CB;width:110px; height:40px; font-size:16px;margin-top:22px">WRITE</button>
+				       		<button type="button" class="btn btn-primary btn pull-right" onclick='fn_write()' style="width:80px; height:29px; font-size:13px;margin-top:20px">WRITE</button>
 						
 					</div>
 					<form  action="<%=request.getContextPath()%>/community/communityList" method="post">
 						<div style="margin-top:50px"></div>
-						<div class="col-lg-1"></div>
-						<div class="col-lg-2" ><div style="wdith:450px"></div></div>
-						<div class="col-lg-1" style="margin-left:35px">
-							<select class="form-control" style="width:100px;" name="opt"> 
+						
+						
+						<div class="col-lg-1" style="margin-left:19%; ">
+							<select class="form-control" style="width:80px;height:30px;margin-top:3px" name="opt"> 
 								<option value="1">제목</option> 
 								<option value="2">내용</option> 
 								<option value="3">작성자</option> 
 							</select>
 						</div>
-						<div class="col-lg-2">
-							<input type="text" name="content" style="width:300px; height:30px;margin-top:3px"/>
+						<div class="col-lg-2"style="margin-left:30px">
+							<input type="text" name="content" style="width:250px; height:30px;margin-top:3px"/>
 						</div>
 						<div class="col-lg-2">
-							<button type="submit" class="btn btn-default" value="search" onclick="return fn_date();" style="height:35px;width:90px;margin-left:98px " >search</button>
+							<button type="submit" class="btn btn-default" value="search" onclick="return fn_date();" style="height:35px;width:80px;margin-left:120%; height:30px; margin-top:3px" >search</button>
 						</div>
-						<div class="col-lg-2"></div>
+						
 					</form>
 			    </div>
 			  

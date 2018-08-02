@@ -210,14 +210,15 @@ public class AdminDAO {
 		
 	}
 
-	public int selectBikeTotalCount(Connection conn){
+	public int selectBikeTotalCount(Connection conn,String shopCode){
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = prop.getProperty("BikeTotalCount");
+		String sql = prop.getProperty("SelectShopTotalCount");
 		int result = 0;
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, shopCode);
 			rs =pstmt.executeQuery();
 			if(rs.next()) {
 //				테이블 데이터갯수가져옴

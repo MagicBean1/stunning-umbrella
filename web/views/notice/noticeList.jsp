@@ -88,7 +88,7 @@ div.main_title{font:italic normal normal 50px/1.4em dinneuzeitgroteskltw01-_8124
 		location.href="<%=request.getContextPath()%>/notice/noticeForm";
 	}
 	//글 찾기 기능
-   /*  $(document).ready(function(){
+  $(document).ready(function(){
 	   $("#myInput").on("keyup", function() {
 	     var value = $(this).val();
 	     
@@ -96,7 +96,7 @@ div.main_title{font:italic normal normal 50px/1.4em dinneuzeitgroteskltw01-_8124
 	       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 	     });
 	   });
-	 }); */
+	 }); 
 	//메인공지사항
 	
 	
@@ -150,7 +150,7 @@ div.main_title{font:italic normal normal 50px/1.4em dinneuzeitgroteskltw01-_8124
 	      <% } %>
 	   </table>
 	   <div>
-	   		<!-- <input class="form-control" id="myInput" style="width: 150px;" type="text" placeholder="Search..." > -->
+	   		 <input class="form-control" id="myInput" style="width: 150px;" type="text" placeholder="Search..." > 
 	   		<p id="pp"><%= "총 게시물 :" + request.getAttribute("totalContent") %>   </p>
 	   </div>
 	    <div style="height: 130px; width: 300px; margin-bottom: 20px;">

@@ -33,7 +33,6 @@ public class BikeShopSearchServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String shopCode = request.getParameter("shopCode");
-		System.out.println(shopCode);
 		
 		
 		
@@ -50,10 +49,9 @@ public class BikeShopSearchServlet extends HttpServlet {
 			
 	
 		List<Bike> list = new AdminService().shopClassiFication(cPage,numPerPage,shopCode);
+		int totalContent=new AdminService().selectBikeTotalCount(shopCode);
 		
 		
-		
-		int totalContent=new AdminService().selectBikeTotalCount();
 		int totalPage=(int)Math.ceil((double)totalContent/numPerPage);
 		int barSize = 5;  
 //		이전 ,페이지번호,다음 넣을 변수
@@ -68,13 +66,13 @@ public class BikeShopSearchServlet extends HttpServlet {
 					
 					
 		}else {													/*현재페이지 연결*/
-			pageBar += "<ul class='"+"pagination"+"'><li><a href='"+request.getContextPath()+"/bikeList?cPage="+(pageNo-1)+"' ><span>&laquo;</span></a></li></ul>";
+			pageBar += "<ul class='"+"pagination"+"'><li><a href='"+request.getContextPath()+"/bikeShopSearch?cPage="+(pageNo-1)+"&shopCode="+shopCode+"' ><span>&laquo;</span></a></li></ul>";
 		}
 		while(!(pageNo > pageEnd|| pageNo>totalPage)) {
 			if(cPage == pageNo) { 
 				pageBar += "<ul class='"+"pagination"+"'><li><span>"+pageNo+"</span></li></ul>";  /*현재페이지와 페이지번호가 같으면 그번호를 span으로 해버려서 클릭할 수 없게함*/
 			}else {  				 /*나머지 페이지는 누를수 있게해놈*/                                
-				pageBar += "<ul class='"+"pagination"+"'><li><a href='"+request.getContextPath()+"/bikeList?cPage="+pageNo+"' >"+pageNo+"</a></li></ul>";
+				pageBar += "<ul class='"+"pagination"+"'><li><a href='"+request.getContextPath()+"/bikeShopSearch?cPage="+pageNo+"&shopCode="+shopCode+"' >"+pageNo+"</a></li></ul>";
 				//             
 			}
 			pageNo++;
@@ -84,9 +82,8 @@ public class BikeShopSearchServlet extends HttpServlet {
 		if(pageNo > totalPage) {
 			pageBar+="<ul class='"+"pagination"+"'><li><span>&raquo;</span></li></ul>";
 		}else {
-			pageBar += "<ul class='"+"pagination"+"'><li><a href='"+request.getContextPath()+"/bikeList?cPage="+pageNo+"' ><span>&raquo;</span></a></li></ul>";
+			pageBar += "<ul class='"+"pagination"+"'><li><a href='"+request.getContextPath()+"/bikeShopSearch?cPage="+pageNo+"&shopCode="+shopCode+"' ><span>&raquo;</span></a></li></ul>";
 		}
-		
 		
 		request.setAttribute("list", list);
 		request.setAttribute("cPage", cPage);

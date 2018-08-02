@@ -18,7 +18,7 @@
  	    </a><br><br>
 		<h1>Get In Touch</h1>
 		<p>Integer sit amet pede vel arcu aliquet pretium</p>
-		<a href="https://www.facebook.com/people/BI-Kee/"><i class="fab fa-facebook-square" size= "5x"></i></a>
+		<a href="https://www.facebook.com/people/BI-Kee/" target="_blank"><i class="fab fa-facebook-square" size= "5x"></i></a>
 		<a href="#"><i class="fab fa-twitter"></i></a>
 		<a href="#"><i class="fab fa-instagram"></i></a>
 		<a href="#"><i class="fas fa-envelope"></i></a><br><br>

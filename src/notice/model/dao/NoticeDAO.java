@@ -60,7 +60,7 @@ public class NoticeDAO {
 				n.setNoticeContent(rs.getString("notice_content"));
 				n.setNoticeDate(rs.getDate("notice_date"));
 				n.setNoticeReadcount(rs.getInt("notice_readcount"));
-				n.setNoticeCommentCount(rs.getInt("comment_count"));
+				n.setNoticeCommentCount(rs.getInt("NOTICENUM"));
 				list.add(n);
 				
 				

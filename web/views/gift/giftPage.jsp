@@ -1289,7 +1289,7 @@ td{ width:110px;
 				<input type='hidden' name ="buyerId" value ='eunbyul'>
 				<input type='hidden' name ='lentPrice' value='10000'> -->
 				<input type="hidden" name="methodNum" value="2">
-				<input type="hidden" readonly="readonly" id ="sendEmail" name="sendEmail" value="<%=getRandom() %>"/>
+				<input type="hidden" readonly="readonly" id ="presentUid" name="presentUid" value="<%=getRandom() %>"/>
 				<input type="submit" value="결제"  onclick="fn_callingJsp()">
 				<input type="reset" value="취소">
 				

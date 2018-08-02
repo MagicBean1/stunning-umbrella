@@ -9,6 +9,7 @@
 	div.sub_title{font:italic normal normal 35px/1.4em dinneuzeitgroteskltw01-_812426,sans-serif;color:#1E68CB;padding-top:55px}
 	span.font{font:italic normal normal 200px}
 	div.content{background-color:#F0F0F0}
+	div#subContent{margin-left:20%}
 </style>
  <script>
     	function fn_formDate(){
@@ -48,10 +49,10 @@
  
    		
    		<div class="row form-group" style="padding-top:40px">
-   			<div class="col-lg-3"></div>
-   			<div class="col-lg-6">
+   			
+   			<div class="col-lg-7" id="subContent">
    				<label class="control-label col-sm-2">NAME</label>
-   				<div class="col-sm-10">
+   				<div class="col-sm-9">
    					<input type="text" class="form-control" name="writer" readonly value="<%=memberLoggedIn.getMem_id()%>"/>
    				</div>
    			</div>
@@ -59,10 +60,10 @@
    		</div>
    		
    		<div class="row form-group" style="padding-top:40px">
-   			<div class="col-lg-3"></div>
-   			<div class="col-lg-6">
+   			
+   			<div class="col-lg-7" id="subContent">
    				<label class="control-label col-sm-2">TITLE</label>
-   				<div class="col-sm-10">
+   				<div class="col-sm-9">
    					<input type="text" class="form-control" name="title" placeholder="Enter title" required/>
    				</div>
    			</div>
@@ -70,40 +71,38 @@
    		</div>
    		
    		<div class="row form-group" style="padding-top:40px">
-   			<div class="col-lg-3"></div>
-   			<div class="col-lg-6">
+   			
+   			<div class="col-lg-7" id="subContent">
    				<label for="file" class="control-label col-sm-2">FILE</label>
-   				<div class="col-sm-10">
+   				<div class="col-sm-9">
    				<input type="file"  class="form-control" placeholder="file" name="file"></textarea>
    				</div>
    			</div>
    			<div class="col-lg-3"></div>
    		</div>
    		
-   		<div class="row form-group" style="padding-top:40px">
-   			<div class="col-lg-3"></div>
-   			<div class="col-lg-6">
-   				<label for="comment" class="control-label col-sm-2">COMMENT</label>
-   				<div class="col-sm-10">
+   		<div class="row form-group" style="padding-top:40px" >
+   			
+   			<div class="col-lg-7" id="subContent"style="margin-left:18%">
+   				<label for="comment" class="control-label col-sm-2" style="padding-right:17%;">CONTENT</label>
+   				<div class="col-sm-9">
    				<textarea rows="6" class="form-control" placeholder="Enter comment" name="content"></textarea>
    				</div>
    			</div>
    			<div class="col-lg-3"></div>
    		</div>
-   		<div class="row" style="padding-top:40px;padding-bottom:100px">
-   			<div class="col-lg-4"></div>
-   			<div class="col-lg-4">
+   		<div class="row" style="padding-top:40px;padding-bottom:80px;margin-left:31%">
+   		
    					<div class="col-lg-3">
-   						<button type="submit" class="btn btn-primary" value="등록하기" onclick="return fn_formDate();" style="background-color:#1E68CB; height:50px;width:200px " >save</button>
+   						<button type="submit" class="btn btn-primary" value="등록하기" onclick="return fn_formDate();" style=" height:40px;width:130px " >save</button>
    					</div>
-   					<div class="col-lg-3"></div>
+   					
    					<div class="col-lg-3">
-   						<button type="button" class="btn btn-primary" id="btn1" onclick="fn_cancel()" style="background-color:#1E68CB; height:50px;width:200px;margin-left:45px ">cancel</button>
+   						<button type="button" class="btn btn-primary" id="btn1" onclick="fn_cancel()" style="height:40px;width:130px;margin-left:30px ">cancel</button>
    					</div>
    					<div class="col-lg-3"></div>
    			</div>
-   			<div class="col-lg-4"></div>
-   		</div>
+   		
     </div>
     </div>
 	   <!--  <div class="col-lg-2 sidenav">
